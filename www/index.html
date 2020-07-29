@@ -8,14 +8,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
     <title>Intro</title>
     <style>
         body {
             background-color: #202f94;
         }
+        .animate__animated.animate__fadeOut {
+            --animate-duration: 0.5s;
+        }
     </style>
 </head>
-<body>
+<body class="animate__animated" id="body">
 <div style="text-align: center;padding: 10em 3.5em 0 3.5em">
     <img src="img/logo.png" style="width: 100%" alt="">
 </div>
@@ -27,5 +31,14 @@
 <script src="js/jquery-3.4.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    setTimeout(function () {
+        $("#body").addClass('animate__fadeOut')
+    },1000)
+    setTimeout(function () {
+            window.location.href = "splash.html";
+        }, 1500
+    )
+</script>
 </body>
 </html>
